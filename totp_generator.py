@@ -37,5 +37,5 @@ def generate_totp(k: int, time_ref: int = 0, time_step: int = 30, digest: Any = 
     respectively 0 and 30 in the specified case
     """
     c = int((int(time.time()) - time_ref) / time_step)
-    totp = generate_hotp(k, c, digest=hashlib.sha512, digits=10)
+    totp = generate_hotp(k, c, digest=digest, digits=10)
     return totp

@@ -10,7 +10,7 @@ encoded = base64.b32encode(str.encode(shared_secret))
 pyotp_build = pyotp.TOTP(encoded, digits=10, digest=hashlib.sha512, interval=30)
 pyotp_totp = pyotp_build.now()
 
-gen_otp = generate_totp(shared_secret)
+gen_otp = generate_totp(encoded)
 
 print('pyotp generated: ', pyotp_totp)
 print('custom generated otp: ', gen_otp)

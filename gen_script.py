@@ -1,7 +1,7 @@
 """
-This is a script written with direct reference to the pyotp implementation
+This is a script that is written with direct reference to PyOTP implementation
+without any modifications to the functions or their implemntations
 """
-
 import datetime
 import hashlib
 import calendar
